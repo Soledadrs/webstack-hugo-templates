@@ -71,6 +71,27 @@
                         {{ end }}
                     </div>
 
+    <!--音乐-->
+	 <link rel="stylesheet" href="./assets/css/home-APlayer.min.css">  
+	 <script src="./assets/js/jquery.min.js"></script>
+	 <script src="./assets/js/APlayer.min.js"></script>
+	 <script src="./assets/js/Meting.min.js"></script>
+
+<!-- 音乐挂件代码-->
+			<div class="left-div-music">
+							   <div class="swiper-slide">
+								 <div class="aplayer-wrap">
+									 <meting-js
+									  preload="none"
+									   server="netease"
+									   type="playlist"
+									   id="128460001">
+								   </meting-js>  
+								 </div>
+							  </div> 	   
+				</ul>
+			  </div>
+
                     <ul class="nav navbar-menu text-xs order-1 order-md-2">
                         <!-- 一言 -->
                         {{ with .Site.Params.yiyan }}
