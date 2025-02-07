@@ -1,45 +1,15 @@
-<!DOCTYPE html>
-<html>
+<div id="waline"></div>
+<script type="module">
+ import { init } from 'https://unpkg.com/@waline/client@latest/dist/waline.mjs';
 
-<head>
-    <!-- 引入评论 -->		
-    <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-    init({
-      el: '#waline',
-      reaction: 'true', 
-      serverURL: 'https://waline.cares.eu.org',
-	  meta: ['nick','mail','link'],
-      requiredMeta: ['mail','nick'],
-      pageview: true,
-      search: false,
-      wordLimit: 200,
-      pageSize: 5,
-      avatar: 'monsterid',
-	  emoji: [
-             'https://unpkg.com/@waline/emojis@1.2.0/tieba',
-         ],
-         //禁止图片上传按钮
-         imageUploader: false,
-         //不显示版权标志
-         copyright: false,
-     });
-  </script>
-<body>
-                <!-- 评论区 -->
-                    <div class="work">
-                        <h2 class="chtitle"><span>留言</span>评论</span></h2>
-                        <div class="rommentindex">
-                            <div id="waline"></div>
-                        </div>
-                        <div class="menu-box">
-                            <!-- 图标按钮 -->
-                            <div class="menu-button">
-                                <div class="line-box">
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-</body>
-</html>
+ init({
+     el: '#waline',
+     serverURL: '{{ .Site.Params.waline.serverURL }}',
+     lang: '{{ .Site.Params.waline.lang }}',
+     // 表情包配置
+     emoji: [
+         'https://unpkg.com/@waline/emojis@latest/weibo',
+         'https://unpkg.com/@waline/emojis@latest/qq',
+     ],
+ });
+</script>
