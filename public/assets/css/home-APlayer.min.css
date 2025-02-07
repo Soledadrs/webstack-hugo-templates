@@ -249,11 +249,11 @@
 }
 
 .aplayer .aplayer-pic .aplayer-play {
-    width: 26px;
-    height: 26px;
+    width: 10px;
+    height: 52px;
     border: 2px solid rgb(241, 235, 235);
-    bottom: 50%;
-    right: 0%;
+    bottom: 100%;
+    right: 50%;
     margin: 0 -15px -15px 0
 }
 
