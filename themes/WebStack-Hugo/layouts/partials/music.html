@@ -1,31 +1,36 @@
-<!DOCTYPE html>
-<html>
 
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js">script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js">script>
+head>
 <body>
-                <!-- 音乐 -->
-                </br>
-                <div class="work">
-                    <h2 class="chtitle"><span>音乐</span>赏析</span></h2>
-                    <div id="music-player">
-                        <meting-js list-max-height="130px" server="netease" type="playlist" data-fixed="true" data-autoplay="true"
-                            id="508352301">
-                        </meting-js>
-                    </div>
-                </div>
-                
-                <!-- 确保 APlayer 和 Meting 的样式和脚本文件加载 -->
-                <link rel="stylesheet" href="assets/css/APlayer.min.css" media="all">
-                <noscript>
-                    <link rel="stylesheet" href="assets/css/APlayer.min.css">
-                </noscript>
-                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-                <script src="assets/js/APlayer.min.js"></script>
-                <script src="assets/js/Meting.min.js"></script>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        if (typeof Meting !== 'undefined') {
-                            Meting.init();
-                        }
-                    });
-                </script>
-</body>
+    <div class="demo">
+        <div id="player1">
+        div>
+    div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: true,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.5,
+                mutex: true,
+                listFolded: false,
+                listMaxHeight: 90,
+                lrcType: 0,
+                music:[{
+                name:'音乐名',url:'音乐链接',artists:'音乐作者',cover:'封面链接'}]
+        });
+        //ap.init();
+    script>
+body>
