@@ -62,6 +62,18 @@
         <div class="loader">{{ $.Site.Params.textPreLoad }}</div>
     </div>
     {{ end }}
+
+                <!-- 音乐 -->
+                </br>
+                <div class="work">
+                    <h2 class="chtitle"><span>音乐</span>赏析</span></h2>
+                    <div id="music-player">
+                        <meting-js list-max-height="130px" server="netease" type="playlist" data-fixed="true" data-autoplay="true"
+                            id="508352301">
+                        </meting-js>
+                    </div>
+                </div>
+                
     <div class="page-container">
 	{{ if $.Site.Params.expandSidebar }}
 	<div id="sidebar" class="sticky sidebar-nav fade animate-nav" style="width: 170px">
